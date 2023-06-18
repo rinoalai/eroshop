@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> {{ story_type }} </h1>
+<ul>
+    {% for story in stories %}
+    <li><a href="/erosstories/{{ story.number }}">{{ story.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit This Story!</h1>
+
+<form action="{{ url_for('update') }}" method="post">
+    <input type="hidden" name="story_number" value="{{ story.number }}">
+    <label for="s_type">Type of Story:</label>
+    <select name="story_type" id="s_type" required>
+        <option disabled selected value>...</option>
+        {% if story.story_kind == "Standalones" %}
+        <option value="Standalones" selected>Standalone Stories</option>
+        <option value="Farrell Boys Series">Farrell Boys Series</option>
+        <option value="SMU Girls Series">SMU Girls Series</option>
+        <option value="Lost Stars Series">Lost Stars Series</option>
+        <option value="One-Shots">One-Shot Stories</option>
+        <option value="Other Eros Stories">Other Eros Stories</option>
+        <option value="Stories From Other Authors">From Other Authors</option>
+        {% elif story.story_kind == "Farrell Boys Series" %}
+        <option value="Standalones">Standalone Stories</option>
+        <option value="Farrell Boys Series" selected>Farrell Boys Series</option>
+        <option value="SMU Girls Series">SMU Girls Series</option>
+        <option value="Lost Stars Series">Lost Stars Series</option>
+        <option value="One-Shots">One-Shot Stories</option>
+        <option value="Other Eros Stories">Other Eros Stories</option>
+        <option value="Stories From Other Authors">From Other Authors</option>
+        {% elif story.story_kind == "SMU Girls Series" %}
+        <option value="Standalones">Standalone Stories</option>
+        <option value="Farrell Boys Series">Farrell Boys Series</option>
+        <option value="SMU Girls Series" selected>SMU Girls Series</option>
+        <option value="Lost Stars Series">Lost Stars Series</option>
+        <option value="One-Shots">One-Shot Stories</option>
+        <option value="Other Eros Stories">Other Eros Stories</option>
+        <option value="Stories From Other Authors">From Other Authors</option>
+        {% elif story.story_kind == "Lost Stars Series" %}
+        <option value="Standalones">Standalone Stories</option>
+        <option value="Farrell Boys Series">Farrell Boys Series</option>
+        <option value="SMU Girls Series">SMU Girls Series</option>
+        <option value="Lost Stars Series" selected>Lost Stars Series</option>
+        <option value="One-Shots">One-Shot Stories</option>
+        <option value="Other Eros Stories">Other Eros Stories</option>
+        <option value="Stories From Other Authors">From Other Authors</option>
+        {% elif story.story_kind == "One-Shots" %}
+        <option value="Standalones">Standalone Stories</option>
+        <option value="Farrell Boys Series">Farrell Boys Series</option>
+        <option value="SMU Girls Series">SMU Girls Series</option>
+        <option value="Lost Stars Series">Lost Stars Series</option>
+        <option value="One-Shots" selected>One-Shot Stories</option>
+        <option value="Other Eros Stories">Other Eros Stories</option>
+        <option value="Stories From Other Authors">From Other Authors</option>
+        {% elif story.story_kind == "Other Eros Stories" %}
+        <option value="Standalones">Standalone Stories</option>
+        <option value="Farrell Boys Series">Farrell Boys Series</option>
+        <option value="SMU Girls Series">SMU Girls Series</option>
+        <option value="Lost Stars Series">Lost Stars Series</option>
+        <option value="One-Shots">One-Shot Stories</option>
+        <option value="Other Eros Stories" selected>Other Eros Stories</option>
+        <option value="Stories From Other Authors">From Other Authors</option>
+        {% elif story.story_kind == "Stories From Other Authors" %}
+        <option value="Standalones">Standalone Stories</option>
+        <option value="Farrell Boys Series">Farrell Boys Series</option>
+        <option value="SMU Girls Series">SMU Girls Series</option>
+        <option value="Lost Stars Series">Lost Stars Series</option>
+        <option value="One-Shots">One-Shot Stories</option>
+        <option value="Other Eros Stories">Other Eros Stories</option>
+        <option value="Stories From Other Authors" selected>From Other Authors</option>
+        {% endif %}
+    </select><br><br>
+    <label for="s_title">Story Title:</label>
+    <input type="text" name="story_title" id="s_title" value="{{ story.title }}" required><br><br>
+    <label for="s_genre">Genre:</label>
+    <input type="text" name="story_genre" id="s_genre" value="{{ story.genre }}"><br><br>
+    <label for="s_status">Status:</label>
+    <input type="text" name="story_status" id="s_status" value="{{ story.status }}"><br><br>
+    <label for="s_url">Story Cover URL:</label>
+    <input type="url" name="story_url" id="s_url" value="{{ story.url }}"><br>
+    <textarea name="story_desc" cols="30" rows="10">{{ story.description }}</textarea><br>
+    <input type="submit" class="btn btn-outline-success" value="Update!">
+
+</form>
+{% endblock %}

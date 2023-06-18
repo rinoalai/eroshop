@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/style.css') }}">
+    <title>UNIVÆRSE</title>
+</head>
+<body>
+  <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWVzdGhldGljJTIwYm9va3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60');  background-size: 50% 100%;
+    background-position: top 50px left 100px"></div>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index">
+            <img src="https://img.wattpad.com/useravatar/PlayfulEros.128.474279.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            UNIVÆRSE
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Stories
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{url_for('cstories')}}">Complete Stories</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('oghstories')}}">On-going Stories</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="{{url_for('upstories')}}">Upcoming Stories</a></li>
+                </ul>
+            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('register')}}">Add a Story</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="m-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

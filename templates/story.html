@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="text-align:center"> {{ story.title }} </h1>
+<img src="{{ story.url }}" class="rounded mx-auto d-block" alt="{{story.title}} Book Cover" width="128" height="200">
+{% if story.description %}
+<p align="justify" style="text-align:center"> {{ story.description }} </p>
+{% else %}
+<p align="justify" style="text-align:center"> Description: Not yet available. </p>
+{% endif %}
+<ul>
+    {% if story.genre %}
+    <li>Genre: {{ story.genre }}</li>
+    {% else %}
+    <li>Genre: Not yet available.</li>
+    {% endif %}
+    {% if story.status %}
+    <li>Status: {{ story.status }}</li>
+    {% else %}
+    <li>Status: To be updated soon!</li>
+    {% endif %}
+</ul>
+<form action="{{url_for('modify')}}" method="post">
+    <input type="hidden" name="story_number" value="{{ story.number }}">
+    <input class="btn btn-dark" type="submit" name="modify" value="edit"></input>
+    <input class="btn btn-danger" type="submit" name="modify" value="delete"></input>
+</form>
+{% endblock %}

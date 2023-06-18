@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Eros Stories</h1>
+<p>Your very own UNIVÆRSE!</p>
+
+
+<ul>
+    <li><a href="/erosstories/Standalone">Standalone Stories</a></li>
+    <li><a href="/erosstories/Farrell Boys Series">Farrell Boys Series</a></li>
+    <li><a href="/erosstories/SMU Girls Series">SMU Girls Series</a></li>
+    <li><a href="/erosstories/Lost Stars Series">Lost Stars Series</a></li>
+    <li><a href="/erosstories/One-Shot">One-Shot Stories</a></li>
+    <li><a href="/erosstories/Other Eros Stories">Other Eros Stories</a></li>
+    <li><a href="/erosstories/Stories From Other Authors">From Other Authors</a></li>
+</ul>
+<hr>
+    <a href="{{url_for('logout')}}" class="btn btn-outline-secondary">Logout</a>
+{% endblock %}
