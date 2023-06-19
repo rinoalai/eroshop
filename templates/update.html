@@ -8,60 +8,60 @@
     <label for="s_type">Type of Story:</label>
     <select name="story_type" id="s_type" required>
         <option disabled selected value>...</option>
-        {% if story.story_kind == "Standalones" %}
-        <option value="Standalones" selected>Standalone Stories</option>
+        {% if story.story_kind == "Standalone" %}
+        <option value="Standalone" selected>Standalone Stories</option>
         <option value="Farrell Boys Series">Farrell Boys Series</option>
         <option value="SMU Girls Series">SMU Girls Series</option>
         <option value="Lost Stars Series">Lost Stars Series</option>
-        <option value="One-Shots">One-Shot Stories</option>
+        <option value="One-Shot">One-Shot Stories</option>
         <option value="Other Eros Stories">Other Eros Stories</option>
         <option value="Stories From Other Authors">From Other Authors</option>
         {% elif story.story_kind == "Farrell Boys Series" %}
-        <option value="Standalones">Standalone Stories</option>
+        <option value="Standalone">Standalone Stories</option>
         <option value="Farrell Boys Series" selected>Farrell Boys Series</option>
         <option value="SMU Girls Series">SMU Girls Series</option>
         <option value="Lost Stars Series">Lost Stars Series</option>
-        <option value="One-Shots">One-Shot Stories</option>
+        <option value="One-Shot">One-Shot Stories</option>
         <option value="Other Eros Stories">Other Eros Stories</option>
         <option value="Stories From Other Authors">From Other Authors</option>
         {% elif story.story_kind == "SMU Girls Series" %}
-        <option value="Standalones">Standalone Stories</option>
+        <option value="Standalone">Standalone Stories</option>
         <option value="Farrell Boys Series">Farrell Boys Series</option>
         <option value="SMU Girls Series" selected>SMU Girls Series</option>
         <option value="Lost Stars Series">Lost Stars Series</option>
-        <option value="One-Shots">One-Shot Stories</option>
+        <option value="One-Shot">One-Shot Stories</option>
         <option value="Other Eros Stories">Other Eros Stories</option>
         <option value="Stories From Other Authors">From Other Authors</option>
         {% elif story.story_kind == "Lost Stars Series" %}
-        <option value="Standalones">Standalone Stories</option>
+        <option value="Standalone">Standalone Stories</option>
         <option value="Farrell Boys Series">Farrell Boys Series</option>
         <option value="SMU Girls Series">SMU Girls Series</option>
         <option value="Lost Stars Series" selected>Lost Stars Series</option>
-        <option value="One-Shots">One-Shot Stories</option>
+        <option value="One-Shot">One-Shot Stories</option>
         <option value="Other Eros Stories">Other Eros Stories</option>
         <option value="Stories From Other Authors">From Other Authors</option>
-        {% elif story.story_kind == "One-Shots" %}
-        <option value="Standalones">Standalone Stories</option>
+        {% elif story.story_kind == "One-Shot" %}
+        <option value="Standalone">Standalone Stories</option>
         <option value="Farrell Boys Series">Farrell Boys Series</option>
         <option value="SMU Girls Series">SMU Girls Series</option>
         <option value="Lost Stars Series">Lost Stars Series</option>
-        <option value="One-Shots" selected>One-Shot Stories</option>
+        <option value="One-Shot" selected>One-Shot Stories</option>
         <option value="Other Eros Stories">Other Eros Stories</option>
         <option value="Stories From Other Authors">From Other Authors</option>
         {% elif story.story_kind == "Other Eros Stories" %}
-        <option value="Standalones">Standalone Stories</option>
+        <option value="Standalone">Standalone Stories</option>
         <option value="Farrell Boys Series">Farrell Boys Series</option>
         <option value="SMU Girls Series">SMU Girls Series</option>
         <option value="Lost Stars Series">Lost Stars Series</option>
-        <option value="One-Shots">One-Shot Stories</option>
+        <option value="One-Shot">One-Shot Stories</option>
         <option value="Other Eros Stories" selected>Other Eros Stories</option>
         <option value="Stories From Other Authors">From Other Authors</option>
         {% elif story.story_kind == "Stories From Other Authors" %}
-        <option value="Standalones">Standalone Stories</option>
+        <option value="Standalone">Standalone Stories</option>
         <option value="Farrell Boys Series">Farrell Boys Series</option>
         <option value="SMU Girls Series">SMU Girls Series</option>
         <option value="Lost Stars Series">Lost Stars Series</option>
-        <option value="One-Shots">One-Shot Stories</option>
+        <option value="One-Shot">One-Shot Stories</option>
         <option value="Other Eros Stories">Other Eros Stories</option>
         <option value="Stories From Other Authors" selected>From Other Authors</option>
         {% endif %}
